@@ -5,32 +5,49 @@ const features = [
   {
     summary: "Welcoming",
     title: "Let's Welcome New Members with Style",
-    description: "Create your own welcome images, which include the user's username and avatar, as well as a customizable background image!",
+    description:
+      "Create your own welcome images, which include the user's username and avatar, as well as a customizable background image!",
     img: "https://via.placeholder.com/500x300",
   },
   {
     summary: "Embeds",
     title: "Easily create embeds for your server!",
-    description: "Illustrate your creativity in embeds by using ProBot's simple customization and sending it to any preferred channel.",
+    description:
+      "Illustrate your creativity in embeds by using ProBot's simple customization and sending it to any preferred channel.",
     img: "https://via.placeholder.com/500x300",
   },
   {
     summary: "Self-assignable Roles",
     title: "React to the messages and get roles!",
-    description: "Set up exclusive reaction roles & buttons, select menus, and let your members have the roles they deserve with a single click!",
+    description:
+      "Set up exclusive reaction roles & buttons, select menus, and let your members have the roles they deserve with a single click!",
     img: "https://via.placeholder.com/500x300",
   },
 ];
 ---
 
 <section class="features">
-    {features.map((feature, index) => (
-      <Card data={feature} flip={index % 2 === 0} />
-    ))}
+  {
+    features.map((feature, index) => (
+      <Card client:visible data={feature} flip={index % 2 === 0} />
+    ))
+  }
 </section>
 
 <style>
   .features {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 256px;
+  }
+
+  
+
+  @media (max-width: 768px) {
+    .features {
+      padding: 0 32px;
+      gap: 128px;
+    }
   }
 </style>

@@ -15,9 +15,19 @@
 </html>
 
 <style>
+  body main {
+    overflow-x: hidden;
+  }
+
 	main {
 		display: flex;
 		flex-direction: column;
 		gap: 128px;
 	}
+
+  @media (width < 1024px) {
+    main {
+      gap: 64px;
+    }
+  }
 </style>
