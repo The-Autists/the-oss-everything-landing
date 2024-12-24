@@ -1,5 +1,6 @@
 ---
-import { Image } from "astro:assets";
+import Image from "astro/components/Image.astro";
+import img from "../assets/awfixer.png";
 ---
 
 <section>
@@ -21,10 +22,9 @@ import { Image } from "astro:assets";
         <a class="btn btn-secondary">Browse Features</a>
       </div>
     </div>
-    <img
+    <Image
       class="logo"
-      loading="eager"
-      src="/awfixer.png"
+      src={img}
       alt="logo"
     />
   </div>
