@@ -8,4 +8,5 @@ export default defineConfig({
   integrations: [react()],
   base: "/",
   site: "https://The-OSS-Everything-Bot.github.io/the-oss-bot-landing",
+  
 });
