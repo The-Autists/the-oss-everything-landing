@@ -6,7 +6,6 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  base: "/the-oss-bot-landing",
-  site: "https://The-OSS-Everything-Bot.github.io",
-  srcDir: "src",
+  base: "/",
+  site: "https://The-OSS-Everything-Bot.github.io/the-oss-bot-landing",
 });
